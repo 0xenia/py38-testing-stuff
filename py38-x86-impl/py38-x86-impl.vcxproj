@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2c4de456-ed2d-4997-9672-87d70eb52983}</ProjectGuid>
+    <RootNamespace>py38x86impl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;PY38X86IMPL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;PY38X86IMPL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>vendor\py38\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;PY38X86IMPL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;PY38X86IMPL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PythonImpl.h" />
+    <ClInclude Include="remem.hpp" />
+    <ClInclude Include="singleton.hpp" />
+    <ClInclude Include="vendor\py38\include\abstract.h" />
+    <ClInclude Include="vendor\py38\include\asdl.h" />
+    <ClInclude Include="vendor\py38\include\ast.h" />
+    <ClInclude Include="vendor\py38\include\bitset.h" />
+    <ClInclude Include="vendor\py38\include\bltinmodule.h" />
+    <ClInclude Include="vendor\py38\include\boolobject.h" />
+    <ClInclude Include="vendor\py38\include\bytearrayobject.h" />
+    <ClInclude Include="vendor\py38\include\bytesobject.h" />
+    <ClInclude Include="vendor\py38\include\bytes_methods.h" />
+    <ClInclude Include="vendor\py38\include\cellobject.h" />
+    <ClInclude Include="vendor\py38\include\ceval.h" />
+    <ClInclude Include="vendor\py38\include\classobject.h" />
+    <ClInclude Include="vendor\py38\include\code.h" />
+    <ClInclude Include="vendor\py38\include\codecs.h" />
+    <ClInclude Include="vendor\py38\include\compile.h" />
+    <ClInclude Include="vendor\py38\include\complexobject.h" />
+    <ClInclude Include="vendor\py38\include\context.h" />
+    <ClInclude Include="vendor\py38\include\cpython\abstract.h" />
+    <ClInclude Include="vendor\py38\include\cpython\dictobject.h" />
+    <ClInclude Include="vendor\py38\include\cpython\fileobject.h" />
+    <ClInclude Include="vendor\py38\include\cpython\initconfig.h" />
+    <ClInclude Include="vendor\py38\include\cpython\interpreteridobject.h" />
+    <ClInclude Include="vendor\py38\include\cpython\object.h" />
+    <ClInclude Include="vendor\py38\include\cpython\objimpl.h" />
+    <ClInclude Include="vendor\py38\include\cpython\pyerrors.h" />
+    <ClInclude Include="vendor\py38\include\cpython\pylifecycle.h" />
+    <ClInclude Include="vendor\py38\include\cpython\pymem.h" />
+    <ClInclude Include="vendor\py38\include\cpython\pystate.h" />
+    <ClInclude Include="vendor\py38\include\cpython\sysmodule.h" />
+    <ClInclude Include="vendor\py38\include\cpython\traceback.h" />
+    <ClInclude Include="vendor\py38\include\cpython\tupleobject.h" />
+    <ClInclude Include="vendor\py38\include\cpython\unicodeobject.h" />
+    <ClInclude Include="vendor\py38\include\datetime.h" />
+    <ClInclude Include="vendor\py38\include\descrobject.h" />
+    <ClInclude Include="vendor\py38\include\dictobject.h" />
+    <ClInclude Include="vendor\py38\include\dtoa.h" />
+    <ClInclude Include="vendor\py38\include\dynamic_annotations.h" />
+    <ClInclude Include="vendor\py38\include\enumobject.h" />
+    <ClInclude Include="vendor\py38\include\errcode.h" />
+    <ClInclude Include="vendor\py38\include\eval.h" />
+    <ClInclude Include="vendor\py38\include\fileobject.h" />
+    <ClInclude Include="vendor\py38\include\fileutils.h" />
+    <ClInclude Include="vendor\py38\include\floatobject.h" />
+    <ClInclude Include="vendor\py38\include\frameobject.h" />
+    <ClInclude Include="vendor\py38\include\funcobject.h" />
+    <ClInclude Include="vendor\py38\include\genobject.h" />
+    <ClInclude Include="vendor\py38\include\graminit.h" />
+    <ClInclude Include="vendor\py38\include\grammar.h" />
+    <ClInclude Include="vendor\py38\include\import.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_accu.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_atomic.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_ceval.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_code.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_condvar.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_context.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_fileutils.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_getopt.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_gil.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_hamt.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_initconfig.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_object.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pathconfig.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pyerrors.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pyhash.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pylifecycle.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pymem.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_pystate.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_traceback.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_tupleobject.h" />
+    <ClInclude Include="vendor\py38\include\internal\pycore_warnings.h" />
+    <ClInclude Include="vendor\py38\include\interpreteridobject.h" />
+    <ClInclude Include="vendor\py38\include\intrcheck.h" />
+    <ClInclude Include="vendor\py38\include\iterobject.h" />
+    <ClInclude Include="vendor\py38\include\listobject.h" />
+    <ClInclude Include="vendor\py38\include\longintrepr.h" />
+    <ClInclude Include="vendor\py38\include\longobject.h" />
+    <ClInclude Include="vendor\py38\include\marshal.h" />
+    <ClInclude Include="vendor\py38\include\memoryobject.h" />
+    <ClInclude Include="vendor\py38\include\methodobject.h" />
+    <ClInclude Include="vendor\py38\include\modsupport.h" />
+    <ClInclude Include="vendor\py38\include\moduleobject.h" />
+    <ClInclude Include="vendor\py38\include\namespaceobject.h" />
+    <ClInclude Include="vendor\py38\include\node.h" />
+    <ClInclude Include="vendor\py38\include\object.h" />
+    <ClInclude Include="vendor\py38\include\objimpl.h" />
+    <ClInclude Include="vendor\py38\include\odictobject.h" />
+    <ClInclude Include="vendor\py38\include\opcode.h" />
+    <ClInclude Include="vendor\py38\include\osdefs.h" />
+    <ClInclude Include="vendor\py38\include\osmodule.h" />
+    <ClInclude Include="vendor\py38\include\parsetok.h" />
+    <ClInclude Include="vendor\py38\include\patchlevel.h" />
+    <ClInclude Include="vendor\py38\include\picklebufobject.h" />
+    <ClInclude Include="vendor\py38\include\pyarena.h" />
+    <ClInclude Include="vendor\py38\include\pycapsule.h" />
+    <ClInclude Include="vendor\py38\include\pyconfig.h" />
+    <ClInclude Include="vendor\py38\include\pyctype.h" />
+    <ClInclude Include="vendor\py38\include\pydebug.h" />
+    <ClInclude Include="vendor\py38\include\pydtrace.h" />
+    <ClInclude Include="vendor\py38\include\pyerrors.h" />
+    <ClInclude Include="vendor\py38\include\pyexpat.h" />
+    <ClInclude Include="vendor\py38\include\pyfpe.h" />
+    <ClInclude Include="vendor\py38\include\pyhash.h" />
+    <ClInclude Include="vendor\py38\include\pylifecycle.h" />
+    <ClInclude Include="vendor\py38\include\pymacconfig.h" />
+    <ClInclude Include="vendor\py38\include\pymacro.h" />
+    <ClInclude Include="vendor\py38\include\pymath.h" />
+    <ClInclude Include="vendor\py38\include\pymem.h" />
+    <ClInclude Include="vendor\py38\include\pyport.h" />
+    <ClInclude Include="vendor\py38\include\pystate.h" />
+    <ClInclude Include="vendor\py38\include\pystrcmp.h" />
+    <ClInclude Include="vendor\py38\include\pystrhex.h" />
+    <ClInclude Include="vendor\py38\include\pystrtod.h" />
+    <ClInclude Include="vendor\py38\include\Python-ast.h" />
+    <ClInclude Include="vendor\py38\include\Python.h" />
+    <ClInclude Include="vendor\py38\include\pythonrun.h" />
+    <ClInclude Include="vendor\py38\include\pythread.h" />
+    <ClInclude Include="vendor\py38\include\pytime.h" />
+    <ClInclude Include="vendor\py38\include\py_curses.h" />
+    <ClInclude Include="vendor\py38\include\rangeobject.h" />
+    <ClInclude Include="vendor\py38\include\setobject.h" />
+    <ClInclude Include="vendor\py38\include\sliceobject.h" />
+    <ClInclude Include="vendor\py38\include\structmember.h" />
+    <ClInclude Include="vendor\py38\include\structseq.h" />
+    <ClInclude Include="vendor\py38\include\symtable.h" />
+    <ClInclude Include="vendor\py38\include\sysmodule.h" />
+    <ClInclude Include="vendor\py38\include\token.h" />
+    <ClInclude Include="vendor\py38\include\traceback.h" />
+    <ClInclude Include="vendor\py38\include\tracemalloc.h" />
+    <ClInclude Include="vendor\py38\include\tupleobject.h" />
+    <ClInclude Include="vendor\py38\include\typeslots.h" />
+    <ClInclude Include="vendor\py38\include\ucnhash.h" />
+    <ClInclude Include="vendor\py38\include\unicodeobject.h" />
+    <ClInclude Include="vendor\py38\include\warnings.h" />
+    <ClInclude Include="vendor\py38\include\weakrefobject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PythonImpl.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
